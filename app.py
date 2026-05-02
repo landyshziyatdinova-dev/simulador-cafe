@@ -101,15 +101,9 @@ col4.metric("Margen promedio",  f"{round(margen_total, 2)}%")
 
 st.divider()
 
-# Gráfica
-st.subheader("📈 Gráfica de utilidad por cliente")
-df = pd.DataFrame(rows)
-st.bar_chart(df.set_index("Cliente")["Utilidad"])
-
-st.divider()
-
 # Tabla detalle
 st.subheader("📋 Detalle por cliente")
+df = pd.DataFrame(rows)
 st.dataframe(df, use_container_width=True)
 
 st.divider()
